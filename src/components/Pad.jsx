@@ -6,7 +6,7 @@ const Pad = ({ display, setDisplay }) => {
         '7', '8', '9', '*',
         '4', '5', '6', '-',
         '1', '2', '3', '+',
-        '0', '.', 'EQUALS'  
+        '0', '.', '='  
     ];
 
     const handleCLick = (button) => {
@@ -15,7 +15,7 @@ const Pad = ({ display, setDisplay }) => {
             setDisplay('');
         } else if (button === 'C') {
             setDisplay(display.slice(0, -1));
-        } else if (button === 'EQUALS') {
+        } else if (button === '=') {
             try {
                 let result = eval(display);
                 result = result.toString().split('.')[1]?.length > 2 ? result.toFixed(2) : result
