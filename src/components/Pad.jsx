@@ -18,7 +18,7 @@ const Pad = ({ display, setDisplay }) => {
         } else if (button === '=') {
             try {
                 let result = 0;
-                result = display == "05/11" || "5/11" ? "Te amo Joy" : eval(display)
+                result = display === "05/11" || display === "5/11" ? "Te amo Joy" : eval(display)
                 result = result.toString().split('.')[1]?.length > 2 ? result.toFixed(2) : result
                 setDisplay(result.toString());
             } catch (error) {
